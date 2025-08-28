@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BOSS TOYS — Wholesale & Imported Toys</title>
+
+  <style>
+  :root{
+    --primary:#0b72c3;--bg:#f6f8fb;--muted:#6b7280;--card:#fff;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Inter,Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#222}
+  .container{max-width:1100px;margin:0 auto;padding:24px}
+  .header{background:var(--primary);color:#fff;padding:14px 0;position:sticky;top:0;z-index:30;box-shadow:0 3px 8px rgba(0,0,0,0.08)}
+  .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+  .logo img{height:28px}
+  .nav{display:flex;gap:16px}
+  .nav a{color:white;text-decoration:none;font-weight:600;cursor:pointer}
+  .cta{background:#fff;color:var(--primary);padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:700}
+  .hero{background:linear-gradient(90deg,#ffffff 0%, #eaf4ff 100%);padding:38px 0}
+  .grid{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  h1{font-size:28px;margin:0;color:var(--primary)}
+  .tag{color:var(--muted);margin-top:8px}
+  .btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block}
+  .btn.alt{background:#fff;color:var(--primary);border:1px solid rgba(11,114,195,0.15)}
+  .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 16px rgba(16,24,40,0.04)}
+  .section{padding:40px 0}
+  .section-title{text-align:center;color:var(--primary);margin-bottom:18px;font-size:22px}
+  .about p{line-height:1.6;color:var(--muted)}
+  .features{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between}
+  .feature{flex:1;min-width:180px;padding:14px;border-radius:8px;background:#fff;text-align:center}
+  .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .product{background:#fff;border-radius:10px;padding:12px;text-align:center}
+  .product img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+  .small{height:120px}
+  .cat-title{font-weight:700;color:var(--primary);margin:8px 0}
+  .footer{background:#0b0f17;color:#ddd;padding:24px;margin-top:30px}
+  .footer a{color:#fff;text-decoration:none}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:800px){
+    .nav{display:none}
+    .contact-grid{grid-template-columns:1fr}
+  }
+  .whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:14px;border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,0.25);text-decoration:none;font-size:22px}
+  .modal{display:none;position:fixed;z-index:200;inset:0;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:20px}
+  .modal img{max-width:96%;max-height:90%;border-radius:8px}
+  .close-x{position:absolute;right:22px;top:22px;color:#fff;font-size:28px;cursor:pointer}
+  /* small nav for mobile */
+  .hamb{display:none}
+  @media(max-width:700px){.hamb{display:block;color:#fff;font-weight:700}}
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap container">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="logo" onclick="go('#home')">
+        <span style="font-weight:800;font-size:20px;color:#fff">B</span>
+        <img src="images/tennis-ball.png" alt="ball">
+        <span style="font-weight:800;font-size:20px;color:#fff">SS TOYS</span>
+      </div>
+      <div style="font-size:12px;color:#fff;margin-left:8px">Affordable Toys, Unlimited Happiness</div>
+    </div>
+
+    <div class="nav" id="navlinks">
+      <a onclick="go('#home')">Home</a>
+      <a onclick="go('#about')">About</a>
+      <a onclick="go('#products')">Products</a>
+      <a onclick="go('#reviews')">Reviews</a>
+      <a onclick="go('#contact')">Contact</a>
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="cta" href="tel:7903638631">Call: 7903638631</a>
+      <div class="hamb" onclick="toggleNav()">☰</div>
+    </div>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero section">
+  <div class="container grid">
+    <div style="flex:1;min-width:300px">
+      <h1>Your Trusted Toy Wholesaler & Importer</h1>
+      <div class="tag">Wholesale & Imported Collections • Bulk supply to retailers and distributors</div>
+      <div style="margin-top:14px">
+        <a class="btn" onclick="go('#contact')">Request Quote</a>
+        <a class="btn alt" style="margin-left:8px" onclick="go('#products')">See Products</a>
+      </div>
+      <div style="margin-top:18px;color:var(--muted)">
+        <strong>Phone:</strong> 7903638631 &nbsp; • &nbsp; <strong>Email:</strong> anshu143131@gmail.com
+      </div>
+    </div>
+
+    <div style="flex:1;min-width:260px">
+      <div class="card">
+        <h3 style="margin:0 0 8px 0">Why Choose B 🎾 SS TOYS?</h3>
+        <ul style="margin:0;color:var(--muted);line-height:1.6;padding-left:18px">
+          <li>Bulk wholesale pricing & dependable stock</li>
+          <li>Imported premium toys & local range</li>
+          <li>Fast supply for retailers, regular consignments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section container">
+  <h2 class="section-title">About Us</h2>
+  <div class="card about">
+    <p>
+      Welcome to <strong>B 🎾 SS TOYS</strong>, a leading wholesaler and importer of toys based in Patna.
+      We supply both Indian-made and imported toys in bulk to retailers, distributors, and businesses.
+      Our focus is quality, reliability, and competitive bulk pricing — delivering <em>Affordable Toys, Unlimited Happiness</em>.
+    </p>
+    <p><strong>Imported Collections:</strong> We source selected premium toys internationally and supply them at wholesale prices. Contact us for MOQ and pricing.</p>
+  </div>
+</section>
+
+<!-- PRODUCTS (single page; categories inside) -->
+<section id="products" class="section container">
+  <h2 class="section-title">Products — Wholesale Catalog</h2>
+
+  <!-- Imported RC Cars -->
+  <div class="card" style="margin-bottom:18px">
+    <h3>Imported RC Cars & Vehicles</h3>
+    <p style="color:var(--muted)">High-speed RC cars, formula cars, drift cars and monster trucks — available in bulk. Contact for MOQ & pricing.</p>
+    <div class="products-grid" style="margin-top:12px">
+      <div class="product">
+        <img class="zoom" data-src="images/rc1.jpg" src="images/rc1.jpg" alt="RC Drift">
+        <div class="cat-title">RC Drift Car — Imported</div>
+        <div style="color:var(--muted);font-size:13px">MOQ available • Bulk pricing</div>
+      </div>
+      <div class="product">
+        <img class="zoom small" data-src="images/rc2.jpg" src="images/rc2.jpg" alt="Formula">
+        <div class="cat-title">Formula Car — Imported</div>
+      </div>
+      <div class="product">
+        <img class="zoom" data-src="images/monster1.jpg" src="images/monster1.jpg" alt="Monster">
+        <div class="cat-title">Off-road Monster Truck</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft Toys -->
+  <div class="card" style="margin-bottom:18px">
+    <h3>Soft Toys & Plushies (Bulk)</h3>
+    <p style="color:var(--muted)">Cute plushies and collectible soft toys in sets — suitable for retail displays and gifting lines.</p>
+    <div class="products-grid" style="margin-top:12px">
+      <div class="product">
+        <img class="zoom" data-src="images/soft1.jpg" src="images/soft1.jpg" alt="Plush set 1">
+        <div class="cat-title">Plush Collectible — Love / Happiness / Loyalty</div>
+      </div>
+      <div class="product">
+        <img class="zoom" data-src="images/soft2.jpg" src="images/soft2.jpg" alt="Plush set 2">
+        <div class="cat-title">Plush Set — Serenity / Hope / Luck</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessories -->
+  <div class="card" style="margin-bottom:18px">
+    <h3>Imported Accessories & Novelties</h3>
+    <p style="color:var(--muted)">Bottles, novelty cups and small accessories — imported designs for variety stores and gift shops.</p>
+    <div class="products-grid" style="margin-top:12px">
+      <div class="product">
+        <img class="zoom" data-src="images/cup1.jpg" src="images/cup1.jpg" alt="Cup 1">
+        <div class="cat-title">Designer Cup — Imported</div>
+      </div>
+      <div class="product">
+        <img class="zoom" data-src="images/cup2.jpg" src="images/cup2.jpg" alt="Cup 2">
+        <div class="cat-title">Sparkle Bottle — Wholesale</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:14px">
+    <a class="btn" onclick="go('#contact')">Request a Bulk Quote</a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section container">
+  <h2 class="section-title">Customer Reviews</h2>
+  <div class="card">
+    <p><strong>★★★★★</strong> "Great bulk pricing and reliable delivery." — Retailer, Patna</p>
+    <p><strong>★★★★☆</strong> "Wide variety, imported items look premium." — Shop Owner</p>
+    <p style="color:var(--muted)">Want to leave a review? Click the button to add your review on Google once your Business Profile has reviews enabled.</p>
+    <div style="margin-top:12px">
+      <a class="btn" href="https://search.google.com/local/writereview?placeid=" target="_blank">Write a Review on Google</a>
+      <a class="btn alt" style="margin-left:8px" href="https://www.google.com/maps" target="_blank">Read Reviews on Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section container">
+  <h2 class="section-title">Contact & Location</h2>
+  <div class="card contact-grid">
+    <div>
+      <h3>Get in touch</h3>
+      <p style="color:var(--muted)"><strong>Phone:</strong> 7903638631</p>
+      <p style="color:var(--muted)"><strong>Email:</strong> <a href="mailto:anshu143131@gmail.com">anshu143131@gmail.com</a></p>
+      <p style="color:var(--muted)"><strong>Address:</strong><br>RK Avenue, Churi Market, Langar Toli, Dariyapur, Kadamkuan, Patna, Bihar — 800003</p>
+
+      <h4>Request Quote (Imported Stock)</h4>
+      <p style="color:var(--muted)">For bulk orders & imported stock quotations, fill the form below or call/WhatsApp us.</p>
+
+      <form action="mailto:anshu143131@gmail.com" method="post" enctype="text/plain">
+        <div style="margin-bottom:8px"><input name="Name" placeholder="Your name" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc"></div>
+        <div style="margin-bottom:8px"><input name="Business" placeholder="Business name" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc"></div>
+        <div style="margin-bottom:8px"><input name="Phone" placeholder="Phone" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc"></div>
+        <div style="margin-bottom:8px"><textarea name="Message" placeholder="Message / Requirement" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;min-height:90px"></textarea></div>
+        <div><button class="btn" type="submit">Send Enquiry</button></div>
+      </form>
+    </div>
+
+    <div>
+      <h3>Find Us</h3>
+      <!-- Google Maps embed -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.847732245716!2d85.1431481!3d25.6072257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5852e0b77f7b%3A0x47f34d85b9ff4e5!2sRK%20Avenue%2C%20Churi%20Market%2C%20Langar%20Toli%2C%20Dariyapur%2C%20Kadamkuan%2C%20Patna%2C%20Bihar%20800003!5e0!3m2!1sen!2sin!4v1693141967000!5m2!1sen!2sin" style="width:100%;height:320px;border:0;border-radius:8px"></iframe>
+      <div style="margin-top:8px">
+        <a class="btn" href="https://www.google.com/maps?q=BOSS+TOYS+Patna" target="_blank">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>
+        <strong>B 🎾 SS TOYS</strong><br>
+        RK Avenue, Churi Market, Patna, Bihar <br>
+        Phone: 7903638631 • Email: anshu143131@gmail.com
+      </div>
+      <div>
+        <a href="#products" style="color:#fff">Products</a> &nbsp; • &nbsp;
+        <a href="#contact" style="color:#fff">Contact</a>
+      </div>
+    </div>
+    <div style="margin-top:16px;font-size:13px;color:#bbb">© 2025 B 🎾 SS TOYS — Wholesale & Imported Toys</div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917903638631" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<!-- image modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close-x" onclick="closeModal()">✕</span>
+  <img src="" alt="enlarged">
+</div>
+
+<script>
+/* navigation and section show */
+function go(hash){
+  // hide mobile nav if open
+  const nav = document.getElementById('navlinks');
+  if(window.innerWidth < 700) nav.style.display = 'none';
+  // scroll to section smoothly
+  const id = hash.replace('#','');
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* mobile nav toggle */
+function toggleNav(){
+  const nav = document.getElementById('navlinks');
+  if(nav.style.display === 'flex') nav.style.display = 'none';
+  else nav.style.display = 'flex';
+}
+
+/* image modal */
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('zoom')){
+    const src = e.target.getAttribute('data-src') || e.target.src;
+    const modal = document.getElementById('imgModal');
+    modal.querySelector('img').src = src;
+    modal.style.display = 'flex';
+  }
+});
+function closeModal(){
+  document.getElementById('imgModal').style.display = 'none';
+}
+
+/* small helpful: allow keyboard Esc to close modal */
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeModal();
+});
+</script>
+
+</body>
+</html>
